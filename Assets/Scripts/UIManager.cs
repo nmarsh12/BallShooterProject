@@ -12,23 +12,20 @@ public class UIManager : MonoBehaviour
     //private GameManager _gameManager;
 
 
-    public Text modeText;
-    public Text ballMovingText;
+    public Text modeText;    
     public Text ShotsLeftCount;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        //gameManager = GameObject.FindWithTag("GameController");
-        //_gameManager = gameManager.GetComponent<GameManager>();
-
         _ballController = ball.GetComponent<BallController>(); 
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {        /*
+
         if (_ballController.isBallMoving() == true)
         {
             modeText.text = "Wait";
@@ -39,12 +36,14 @@ public class UIManager : MonoBehaviour
         {
             modeText.text = "Aim & Shoot";
             ballMovingText.text = "BALL STOPPED";
-        }        
+        }  
+        */
     }
+
 
     public void UpdateShotsleft(int count)
     {
-        Debug.Log(count);
+        //Debug.Log(count);
         ShotsLeftCount.text = count.ToString();
     }
 

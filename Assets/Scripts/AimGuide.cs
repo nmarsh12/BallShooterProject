@@ -20,14 +20,15 @@ public class AimGuide : MonoBehaviour
         // turns off the guide when the ball is not moving.. 
         // bug where the guide will show while the ball reverses direction when its shot uphill..
 
+        /*
         if (_ballController.isBallMoving() == true)
         {
-            meshHandler.SetActive(false);
+            //meshHandler.SetActive(false);
         }
         else
         {
-            meshHandler.SetActive(true);
-        }
+            //meshHandler.SetActive(true);
+        }*/
     }
 
 

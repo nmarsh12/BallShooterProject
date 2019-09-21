@@ -96,6 +96,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -181,11 +182,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4309227301705464918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a6ff86f920668f4e91e5bce7ade2a14, type: 3}
+  m_Script: {fileID: 11500000, guid: b7bb977bf5b85d54f8e8458da7dc1cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 7282497415887828663}
-  meshHandler: {fileID: 4282781815554823420}
+  meshHandler: {fileID: 846674844130723293}
 --- !u!1 &4511222821431096410
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,6 +253,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1222,7 +1224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5835f94427ddaf43899bcc34b6e19ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb_ball: {fileID: 0}
   aimGuide: {fileID: 0}
   ballSpeed: 0
   ballMoving: 0
@@ -1236,7 +1237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7149036668910173976}
   m_Layer: 0
-  m_Name: Ball Group (1)
+  m_Name: Ball Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1324,6 +1325,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
