@@ -8,7 +8,7 @@ public class BallController : MonoBehaviour
     public GameObject aimGuide;
     public float ballSpeed;
 
-    public bool ballMoving;
+    public bool ballStopped;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,12 @@ public class BallController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ballSpeed = rb_ball.velocity.magnitude;       
+        ballSpeed = rb_ball.velocity.magnitude;
+        if (rb_ball.IsSleeping())
+        {
+            ballStopped = true;
+        }
+        else { ballStopped = false; }
     }    
 
 

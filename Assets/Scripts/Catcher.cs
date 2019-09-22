@@ -18,7 +18,7 @@ public class Catcher : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log(other.name);
-        //_gameManager.ResetBallPos();
+        _gameManager.ResetBallPos();
     }
 
 

@@ -117,10 +117,9 @@ public class GameManager : MonoBehaviour
                 // once ball is ALMOST not moving, stop the ball outright.
                 if (Time.time > checkTime) // this adds a slight delay before checking, prevents it from thinking the ball stopped before it even started moving
                 {
-                    if (_ballController.ballSpeed < 0.05f)
-                    {     
-                            _ballController.StopBall();
-                            gameState = GameState.LoseCheck;
+                    if (_ballController.ballStopped == true)
+                    {
+                        gameState = GameState.LoseCheck;
                     }
                 }
                 break;
