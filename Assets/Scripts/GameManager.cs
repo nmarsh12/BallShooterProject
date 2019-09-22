@@ -35,6 +35,9 @@ public class GameManager : MonoBehaviour
     private float checkTime;
     private float delay;
 
+    public float BallStopCheckTime;
+    public float BallStopDelayTime;
+
     public GameObject startPosition;
 
     public enum GameState { MainMenu, Aim, Rolling, LoseCheck, LevelComplete }
@@ -94,7 +97,7 @@ public class GameManager : MonoBehaviour
                     shotsLeft -= 1;
                     _uIManager.UpdateShotsleft(shotsLeft);
                     gameState = GameState.Rolling;
-                    TimeDelay(0.5f);
+                    TimeDelay(0.1f);
                 }
                 break;
 
@@ -105,29 +108,19 @@ public class GameManager : MonoBehaviour
 
             case GameState.Rolling:
 
-                //Debug.Log(checkTime);
+                
 
                 cameraOrbit.GetComponent<MouseOrbitImproved>().enabled = true;
 
                 _uIManager.modeText.text = "Wait for ball to stop";
-
-                // once ball is below a speed threshold start slowing the ball.
-                if (Time.time > checkTime)
-                {
-                    //Debug.Log("performing Check");
-                    if (_ballController.ballSpeed < 0.6f)
-                    {
-                        _ballController.slowBall();
-                    }
-                }
-
+                
                 // once ball is ALMOST not moving, stop the ball outright.
-                if (Time.time > checkTime)
+                if (Time.time > checkTime) // this adds a slight delay before checking, prevents it from thinking the ball stopped before it even started moving
                 {
-                    if (_ballController.ballSpeed < 0.01f)
-                    {
-                        _ballController.StopBall();
-                        gameState = GameState.LoseCheck;
+                    if (_ballController.ballSpeed < 0.05f)
+                    {     
+                            _ballController.StopBall();
+                            gameState = GameState.LoseCheck;
                     }
                 }
                 break;
@@ -242,6 +235,12 @@ public class GameManager : MonoBehaviour
     {
         stateChangeTimeStamp = Time.time;
         checkTime = Time.time + Delay; 
+    }
+
+    void BallStopDelay()
+    {
+        BallStopCheckTime = Time.time;
+        BallStopDelayTime = Time.time + 0.5f;
     }
 
 

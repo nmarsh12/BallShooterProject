@@ -13,24 +13,7 @@ public class AimGuide : MonoBehaviour
     {
         _ballController = ball.GetComponent<BallController>();
     }
-
-
-    private void Update()
-    {
-        // turns off the guide when the ball is not moving.. 
-        // bug where the guide will show while the ball reverses direction when its shot uphill..
-
-        /*
-        if (_ballController.isBallMoving() == true)
-        {
-            //meshHandler.SetActive(false);
-        }
-        else
-        {
-            //meshHandler.SetActive(true);
-        }*/
-    }
-
+    
 
     void LateUpdate()
     {
