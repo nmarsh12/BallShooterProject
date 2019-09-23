@@ -14,7 +14,7 @@ public class MainMenuBallRespawner : MonoBehaviour
         {
             int RandomX = Random.Range(-25, 25);
             int RandomY = Random.Range(0, 100);
-            int RandomZ = Random.Range(-27, -30);
+            int RandomZ = Random.Range(-29, -30);
 
             Instantiate(ball, new Vector3(RandomX, RandomY, RandomZ), transform.rotation);
         }
