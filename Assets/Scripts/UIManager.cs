@@ -14,37 +14,19 @@ public class UIManager : MonoBehaviour
 
     public Text modeText;    
     public Text ShotsLeftCount;
+
+    public Text LevelCount;
     
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        _ballController = ball.GetComponent<BallController>(); 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {        /*
-
-        if (_ballController.isBallMoving() == true)
-        {
-            modeText.text = "Wait";
-            ballMovingText.text = "BALL MOVING";
-        }
-
-        else
-        {
-            modeText.text = "Aim & Shoot";
-            ballMovingText.text = "BALL STOPPED";
-        }  
-        */
-    }
-
-
     public void UpdateShotsleft(int count)
-    {
-        //Debug.Log(count);
+    {        
         ShotsLeftCount.text = count.ToString();
     }
+
+    public void UpdateLevelCount(int count)
+    {
+        LevelCount.text = count.ToString();
+    }
+        
+
 
 }

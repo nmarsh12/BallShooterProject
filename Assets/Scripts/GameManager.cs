@@ -14,10 +14,9 @@ public class GameManager : MonoBehaviour
     public GameObject LevelCompleteUI;
     public GameObject LevelFailUI;
     public GameObject GameCompleteUI;
+    public GameObject PauseMenuUI;
     
-
-    public GameObject BallGroup;
-    //public GameObject AimGuide;  //may not be needed
+    public GameObject BallGroup;    
 
     public GameObject levelManager;
     public GameObject uIManager;
@@ -40,9 +39,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject startPosition;
 
-    public enum GameState { MainMenu, Aim, Rolling, LoseCheck, LevelComplete }
+    public enum GameState { MainMenu, Aim, Rolling, LoseCheck, LevelComplete, Paused }
 
     private GameState gameState;
+    private GameState LastGameState;
 
     // Start is called before the first frame update
     void Start()
@@ -56,25 +56,18 @@ public class GameManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        Debug.Log(gameState);
-
+    {     
         SceneManager.sceneLoaded += OnSceneLoaded;
-
-        //Debug.Log(_ballController.ballSpeed);
-
-
+        
         switch (gameState)
         {
             case GameState.MainMenu:
                 MainMenuUI.SetActive(true);
                 GamePlayUI.SetActive(false);
                 LevelCompleteUI.SetActive(false);
-                GameCompleteUI.SetActive(false);
-                
-
-
+                GameCompleteUI.SetActive(false);                
                 break;
+
 
             // *** AIM *** ,this mode lets you aim your shot and fire with SPACE
 
@@ -99,16 +92,19 @@ public class GameManager : MonoBehaviour
                     gameState = GameState.Rolling;
                     TimeDelay(0.1f);
                 }
-                break;
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    LastGameState = GameState.Aim;
+                    gameState = GameState.Paused;
+                }
 
+                break;
 
 
 
             // *** ROLLING *** ,after Shooting when the ball is rolling
 
             case GameState.Rolling:
-
-                
 
                 cameraOrbit.GetComponent<MouseOrbitImproved>().enabled = true;
 
@@ -122,14 +118,20 @@ public class GameManager : MonoBehaviour
                         gameState = GameState.LoseCheck;
                     }
                 }
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    LastGameState = GameState.Rolling;
+                    gameState = GameState.Paused;
+                }  
+
                 break;
 
 
 
             // *** LOSECHECK ***, after each shot is done rolling, check to see if you used up all your shots (if so you lose and level resets)
 
-            case GameState.LoseCheck:
-                
+            case GameState.LoseCheck:                
 
                 if (shotsLeft <= 0)
                 {
@@ -141,8 +143,7 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 { gameState = GameState.Aim; }
-
-                                                              
+                                                                              
                 break;
 
 
@@ -156,22 +157,39 @@ public class GameManager : MonoBehaviour
                 //play Fireworks
 
                 int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
-
-                Debug.Log(nextScene);
-
+                
                 if (nextScene > SceneManager.sceneCountInBuildSettings -1) 
-                {
-                    Debug.Log("last Scene");
+                {                    
                     GameCompleteUI.SetActive(true);
                 }
                 else
                 {
                     LevelCompleteUI.SetActive(true);
-                }                    
+                }      
+                
+                break;
+
+
+            // *** PAUSED *** game can be paused from either the AIM or ROLLING State
+
+            case GameState.Paused:
+                cameraOrbit.GetComponent<MouseOrbitImproved>().enabled = false;
+                PauseMenuUI.SetActive(true);
+                Time.timeScale = 0f;
+
+                if(Input.GetKeyDown(KeyCode.Escape))
+                {
+                    UnPause();                   
+                }
+
                 break;
         }
 
     }
+
+
+
+
 
     public void StartGame()
     {
@@ -196,6 +214,9 @@ public class GameManager : MonoBehaviour
         startPosition = GameObject.FindWithTag("StartPos");
         ResetBallPos();
         _uIManager.UpdateShotsleft(shotsLeft);
+
+        int LevelCount = SceneManager.GetActiveScene().buildIndex;        
+        _uIManager.UpdateLevelCount(LevelCount);
     }
 
     public void GoalReached()
@@ -205,24 +226,28 @@ public class GameManager : MonoBehaviour
 
     public void loadNextLevel()
     {
-        LevelCompleteUI.SetActive(false);
-        _ballController.StopBall();
         _levelManager.LoadNextlevel();
+        LevelCompleteUI.SetActive(false);
+        _ballController.StopBall();        
         gameState = GameState.Aim;
-        cameraOrbit.GetComponent<MouseOrbitImproved>().enabled = true;
+        cameraOrbit.GetComponent<MouseOrbitImproved>().enabled = true;        
     }
 
     public void ReloadLevel()
     {
         LevelCompleteUI.SetActive(false);
+        PauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
         _ballController.StopBall();
         _levelManager.ReloadCurrentScene();
         gameState = GameState.Aim;
-        cameraOrbit.GetComponent<MouseOrbitImproved>().enabled = true;
+        cameraOrbit.GetComponent<MouseOrbitImproved>().enabled = true;        
     }
 
     public void returnToMainMenu()
     {
+        PauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
         _levelManager.LoadMainMenu();
         gameState = GameState.MainMenu;
         ResetBallPos();
@@ -241,6 +266,15 @@ public class GameManager : MonoBehaviour
         BallStopCheckTime = Time.time;
         BallStopDelayTime = Time.time + 0.5f;
     }
+
+    public void UnPause()
+    {
+        cameraOrbit.GetComponent<MouseOrbitImproved>().enabled = true;
+        PauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        gameState = LastGameState;
+    }
+    
 
 
 
