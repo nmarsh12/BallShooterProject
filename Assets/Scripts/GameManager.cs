@@ -65,7 +65,8 @@ public class GameManager : MonoBehaviour
                 MainMenuUI.SetActive(true);
                 GamePlayUI.SetActive(false);
                 LevelCompleteUI.SetActive(false);
-                GameCompleteUI.SetActive(false);                
+                GameCompleteUI.SetActive(false);
+                LevelFailUI.SetActive(false);
                 break;
 
 
