@@ -19,7 +19,9 @@ public class BallController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ballSpeed = rb_ball.velocity.magnitude;
+        ballSpeed = rb_ball.angularVelocity.magnitude;
+        Debug.Log(ballSpeed);
+
         if (rb_ball.IsSleeping())
         {
             ballStopped = true;
@@ -35,14 +37,16 @@ public class BallController : MonoBehaviour
         rb_ball.AddForce(aimGuide.transform.forward * 25, ForceMode.VelocityChange);
     }    
 
+    /*
     public void slowBall()
     {        
             rb_ball.velocity *= 0.8f;                        
     }
+    */
 
     public void checkForBallStop()
     {
-        if (ballSpeed < 0.01f)
+        if (ballSpeed < 1.0f)
         {
             StopBall();
             // Debug.Log("stopping Ball");            
