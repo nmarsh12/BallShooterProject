@@ -48887,6 +48887,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6370403931187478669, guid: 8ccaf30cd611258429408fd3ae459d1b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 267332672845540036, guid: 55ddd29729f88bc4884ddf7a9dcb1f8c,
+        type: 3}
+    - target: {fileID: 6370403931187478669, guid: 8ccaf30cd611258429408fd3ae459d1b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6370403931187478669, guid: 8ccaf30cd611258429408fd3ae459d1b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6370403931187478669, guid: 8ccaf30cd611258429408fd3ae459d1b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6370403931200613666, guid: 8ccaf30cd611258429408fd3ae459d1b,
         type: 3}
       propertyPath: m_LocalPosition.z
