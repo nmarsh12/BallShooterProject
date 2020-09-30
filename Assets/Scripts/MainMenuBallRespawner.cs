@@ -5,7 +5,7 @@ using UnityEngine;
 public class MainMenuBallRespawner : MonoBehaviour
 {
     public GameObject ball;
-    public int StartingBalls = 1;
+    public int StartingBalls = 40;
 
     // Start is called before the first frame update
     void Start()
@@ -13,10 +13,12 @@ public class MainMenuBallRespawner : MonoBehaviour
         for (int i = 0; i < StartingBalls; i++)
         {
             int RandomX = Random.Range(-25, 25);
-            int RandomY = Random.Range(0, 100);
-            int RandomZ = Random.Range(-29, -30);
+            int RandomY = Random.Range(0, 150);
+            int RandomZ = Random.Range(-22, -30);
 
-            Instantiate(ball, new Vector3(RandomX, RandomY, RandomZ), transform.rotation);
+            GameObject go = Instantiate(ball, new Vector3(RandomX, RandomY, RandomZ), transform.rotation);
+            
+            go.GetComponentInChildren<MeshRenderer>().material.color = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
         }
     }
 
@@ -31,10 +33,15 @@ public class MainMenuBallRespawner : MonoBehaviour
         Destroy(other.gameObject);
 
         int RandomX = Random.Range(-25, 25);
-        int RandomY = Random.Range(0, 10);
+        int RandomY = Random.Range(0, 25);
         int RandomZ = Random.Range(-27, -30);
+                
 
-        Instantiate(ball, new Vector3(RandomX, RandomY, RandomZ), transform.rotation);          
+        GameObject go = Instantiate(ball, new Vector3(RandomX, RandomY, RandomZ), transform.rotation);
+
+        go.GetComponentInChildren<MeshRenderer>().material.color = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
+
+
     }
 
 

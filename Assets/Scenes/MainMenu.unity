@@ -32211,7 +32211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 3431845438426294903, guid: 16bfaa2e1847bd74fbeef71bd89f2284, type: 3}
-  StartingBalls: 25
+  StartingBalls: 40
 --- !u!65 &1482554298
 BoxCollider:
   m_ObjectHideFlags: 0
