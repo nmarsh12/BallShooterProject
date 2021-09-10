@@ -14,6 +14,8 @@ public class BallController : MonoBehaviour
     void Start()
     {
         rb_ball = this.GetComponent<Rigidbody>();
+
+        
     }
 
     // Update is called once per frame
@@ -22,7 +24,9 @@ public class BallController : MonoBehaviour
         ballSpeed = rb_ball.angularVelocity.magnitude;
         Debug.Log(ballSpeed);
 
-        if (rb_ball.IsSleeping())
+        
+
+        if (rb_ball.IsSleeping())  // The ball is set to sleep when the energy of the ball is less than the sleepThreshold found under Edit>ProjectSettings>Physics
         {
             ballStopped = true;
         }
@@ -37,21 +41,7 @@ public class BallController : MonoBehaviour
         rb_ball.AddForce(aimGuide.transform.forward * 25, ForceMode.VelocityChange);
     }    
 
-    /*
-    public void slowBall()
-    {        
-            rb_ball.velocity *= 0.8f;                        
-    }
-    */
 
-    public void checkForBallStop()
-    {
-        if (ballSpeed < 1.0f)
-        {
-            StopBall();
-            // Debug.Log("stopping Ball");            
-        }
-    }
 
     public void StopBall() //immediately halts the ball movement
     {
