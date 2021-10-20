@@ -48935,6 +48935,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 50.66
       objectReference: {fileID: 0}
+    - target: {fileID: 6370403931200613668, guid: 8ccaf30cd611258429408fd3ae459d1b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6370403931200613669, guid: 8ccaf30cd611258429408fd3ae459d1b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6370403931258305656, guid: 8ccaf30cd611258429408fd3ae459d1b,
         type: 3}
       propertyPath: m_Drag

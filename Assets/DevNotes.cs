@@ -2,7 +2,9 @@
 
 // TODO:
 // Fix camera collision: possible solution https://www.youtube.com/watch?v=mZXYSihSl3I
+// Remove mouse cursor from gameplay state.
 // + more control over power of shot
+
 
 //Extras
 // + Background Music
