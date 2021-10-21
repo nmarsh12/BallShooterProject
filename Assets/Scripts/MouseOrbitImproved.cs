@@ -15,10 +15,15 @@ public class MouseOrbitImproved : MonoBehaviour
     public float yMinLimit = -20f;
     public float yMaxLimit = 80f;
 
-    public float distanceMin = .5f;
-    public float distanceMax = 15f;
+    public float distanceMin = 1.5f;
+    public float distanceMax = 25f;
+    public float distanceDefault = 5.0f;
+    
 
     private new Rigidbody rigidbody;
+    private RaycastHit hit;
+
+    
 
     float x = 0.0f;
     float y = 0.0f;
@@ -39,6 +44,9 @@ public class MouseOrbitImproved : MonoBehaviour
         }
     }
 
+   
+
+
     void LateUpdate()
     {
         if (target)
@@ -52,17 +60,24 @@ public class MouseOrbitImproved : MonoBehaviour
 
             distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * zoomSpeed, distanceMin, distanceMax);
 
+
+            
             RaycastHit hit;
             if (Physics.Linecast(target.position, transform.position, out hit))
-            {
-                distance -= hit.distance;
-            }
+            {                
+                distance -= hit.distance;                
+            }  
             Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
             Vector3 position = rotation * negDistance + target.position;
+
+
 
             transform.rotation = rotation;
             transform.position = position;
         }
+
+        
+
     }
 
     public static float ClampAngle(float angle, float min, float max)

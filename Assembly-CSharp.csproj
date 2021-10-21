@@ -63,11 +63,11 @@
     <Compile Include="Assets\Scripts\MouseOrbitImproved.cs" />
     <Compile Include="Assets\Scripts\MainMenuBallRespawner.cs" />
     <Compile Include="Assets\Scripts\Catcher.cs" />
+    <Compile Include="Assets\Scripts\TEST_CameraController.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\GoalTrigger.cs" />
     <Compile Include="Assets\Scripts\StartGizmo.cs" />
-    <Compile Include="Assets\Scripts\TEST_CameraController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
