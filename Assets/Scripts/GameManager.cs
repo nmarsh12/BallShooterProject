@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Sam Robichaud 
+// NSCC Truro 2022
+
 public class GameManager : MonoBehaviour
 {
     public GameObject cameraOrbit;

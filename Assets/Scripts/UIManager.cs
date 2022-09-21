@@ -2,6 +2,9 @@
 using UnityEngine.UI;
 using UnityEngine;
 
+// Sam Robichaud 
+// NSCC Truro 2022
+
 public class UIManager : MonoBehaviour
 {
     //Script references

@@ -1,4 +1,7 @@
 ﻿
+// Sam Robichaud 
+// NSCC Truro 2022
+
 
 // TODO:
 // Fix camera collision: possible solution https://www.youtube.com/watch?v=mZXYSihSl3I

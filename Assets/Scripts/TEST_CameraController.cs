@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Sam Robichaud 
+// NSCC Truro 2022
+
 public class TEST_CameraController : MonoBehaviour
 {
     public float cameraSmoothingFactor = 1;

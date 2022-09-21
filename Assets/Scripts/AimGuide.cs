@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿// Sam Robichaud 
+// NSCC Truro 2022
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Sam Robichaud 
+// NSCC Truro 2022
+
 public class BallController : MonoBehaviour
 {
     private Rigidbody rb_ball;
