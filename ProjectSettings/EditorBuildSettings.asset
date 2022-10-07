@@ -9,18 +9,138 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: d0f28786d91d6b74cb4dfd2d877f3cf3
   - enabled: 1
-    path: Assets/Scenes/Scene_01.unity
-    guid: 92b880a81104dd7438df43995a56cf2e
+    path: Assets/Scenes/Buu Nguyen/Buu_Nguyen_01.unity
+    guid: 0b480d0e132700740862fc8cd32d79e7
   - enabled: 1
-    path: Assets/Scenes/Scene_02.unity
-    guid: 3314d53fa22aeb74f8200c6239dae48c
+    path: Assets/Scenes/Buu Nguyen/Buu_Nguyen_02.unity
+    guid: 694f6bba9ea8f01408ba72ad1fd52e4d
   - enabled: 1
-    path: Assets/Scenes/Scene_03.unity
-    guid: 0710650d55f72bb45ac4528ee9471680
+    path: Assets/Scenes/Buu Nguyen/Buu_Nguyen_03.unity
+    guid: 67a6d5fc8ae815647a5cba41a6f05839
   - enabled: 1
-    path: Assets/Scenes/Scene_04.unity
-    guid: 0afaa08395387564cbe76675b2ebdab4
+    path: Assets/Scenes/Buu Nguyen/Buu_Nguyen_04.unity
+    guid: 0e998b2d72228f74c8ed2033420fbc19
   - enabled: 1
-    path: Assets/Scenes/Scene_05.unity
-    guid: e310cca876ca93241a082881ec988dec
+    path: Assets/Scenes/Buu Nguyen/Buu_Nguyen_05.unity
+    guid: 6c8dceaaca404ba489c765ec443734e9
+  - enabled: 1
+    path: Assets/Scenes/Clark/Clark_01.unity
+    guid: c64717eb55fc1344da73ce944565a409
+  - enabled: 1
+    path: Assets/Scenes/Clark/Clark_02.unity
+    guid: cd843570b45015a4c9a55d6795b98b5d
+  - enabled: 1
+    path: Assets/Scenes/Clark/Clark_03.unity
+    guid: 5359f2f083247274b8b7c57572a769dc
+  - enabled: 1
+    path: Assets/Scenes/Clark/Clark_04.unity
+    guid: 31bb9839df708f641bb0c788ccb74586
+  - enabled: 1
+    path: Assets/Scenes/Clark/Clark_05.unity
+    guid: 7b608c57d31bba04a8094ee87f7dee7d
+  - enabled: 1
+    path: Assets/Scenes/Damian Caborn Bagnell/Damian_01.unity
+    guid: d181fc93fd7db944bb385e0c96191189
+  - enabled: 1
+    path: Assets/Scenes/Damian Caborn Bagnell/Damian_02.unity
+    guid: d4a4017d93c217b47a1c7e327a9fa704
+  - enabled: 1
+    path: Assets/Scenes/Damian Caborn Bagnell/Damian_03.unity
+    guid: 26860035c689a6746afe90429135eb06
+  - enabled: 1
+    path: Assets/Scenes/Damian Caborn Bagnell/Damian_04.unity
+    guid: 6ab87ea2d4c129a48a271258f736590e
+  - enabled: 1
+    path: Assets/Scenes/Damian Caborn Bagnell/Damian_05.unity
+    guid: 1c6d46cf14fd0524994c5295ee34bf1c
+  - enabled: 1
+    path: Assets/Scenes/Esam/Esam_01.unity
+    guid: 38c3a1916d49b3342ad3c1c7b72d98b2
+  - enabled: 1
+    path: Assets/Scenes/Esam/Esam_02.unity
+    guid: 992dd963d57918145a23e2ef9e622059
+  - enabled: 1
+    path: Assets/Scenes/Esam/Esam_03.unity
+    guid: 0dd522e36da2a564988fdd172acc22a8
+  - enabled: 1
+    path: Assets/Scenes/Esam/Esam_04.unity
+    guid: e0c33aa4d62eb7748adbf62b81c95abc
+  - enabled: 1
+    path: Assets/Scenes/Esam/Esam_05.unity
+    guid: cf5279a57197b30488f792a19ff4cf32
+  - enabled: 1
+    path: Assets/Scenes/JoshCaptick/Josh_Capstick_01.unity
+    guid: 08ad52c9943a51a4eaa9f50f08835308
+  - enabled: 1
+    path: Assets/Scenes/JoshCaptick/Josh_Capstick_02.unity
+    guid: 7470767fbd0eea043a3b1e28b6742477
+  - enabled: 1
+    path: Assets/Scenes/JoshCaptick/Josh_Capstick_03.unity
+    guid: a8475175f35012141ad7c45bd13e0db0
+  - enabled: 1
+    path: Assets/Scenes/JoshCaptick/Josh_Capstick_04.unity
+    guid: 8f00ee3556f1ed343a386a0518641dd2
+  - enabled: 1
+    path: Assets/Scenes/JoshCaptick/Josh_Capstick_05.unity
+    guid: 1c74f0ae982ae6b4487aa66956149704
+  - enabled: 1
+    path: Assets/Scenes/Kailey Fitzgerald/Kailey_01.unity
+    guid: fd33e6065a11bbd479df558b4e23cd68
+  - enabled: 1
+    path: Assets/Scenes/Kailey Fitzgerald/Kailey_02.unity
+    guid: f8e271875940f474c828173b7b5b3ded
+  - enabled: 1
+    path: Assets/Scenes/Kailey Fitzgerald/Kailey_03.unity
+    guid: 4442f77b6f07d544aba26474499e6a7b
+  - enabled: 1
+    path: Assets/Scenes/Kailey Fitzgerald/Kailey_04.unity
+    guid: c64871234d1cd8d4786b249711bd3845
+  - enabled: 1
+    path: Assets/Scenes/Kailey Fitzgerald/Kailey_05.unity
+    guid: c402185dcb6dac04fa398c85b84addfa
+  - enabled: 1
+    path: Assets/Scenes/Raven Mortimer/Raven_Mortimer_01.unity
+    guid: c39211870a877ba4bac7a174295d5894
+  - enabled: 1
+    path: Assets/Scenes/Raven Mortimer/Raven_Mortimer_02.unity
+    guid: e41b0ae5962e4f0469db46659554e9b8
+  - enabled: 1
+    path: Assets/Scenes/Raven Mortimer/Raven_Mortimer_03.unity
+    guid: fb66ab115a6f55d4081880fea01accda
+  - enabled: 1
+    path: Assets/Scenes/Raven Mortimer/Raven_Mortimer_04.unity
+    guid: 45deb3b4b6406034eb824de26bf65082
+  - enabled: 1
+    path: Assets/Scenes/Raven Mortimer/Raven_Mortimer_05.unity
+    guid: d15e6d344516fd84fa986bbc95691063
+  - enabled: 1
+    path: Assets/Scenes/Robert MacNeil/Robert_01.unity
+    guid: 409d5cc77bdb69b48a505d73fe725ea9
+  - enabled: 1
+    path: Assets/Scenes/Robert MacNeil/Robert_02.unity
+    guid: 1fe5815eb0b76d2449a2bcc97a1e82df
+  - enabled: 1
+    path: Assets/Scenes/Robert MacNeil/Robert_03.unity
+    guid: fa8850efa7da051459f8e833ad0af231
+  - enabled: 1
+    path: Assets/Scenes/Robert MacNeil/Robert_04.unity
+    guid: c3c238a4fba05064396f591db13d6685
+  - enabled: 1
+    path: Assets/Scenes/Robert MacNeil/Robert_05.unity
+    guid: 13225431b5315fd4cb804369bf78cc92
+  - enabled: 1
+    path: Assets/Scenes/Spencer Price/Spencer_01.unity
+    guid: 5cd14ba7d2cc8b14194232b8ef4a023e
+  - enabled: 1
+    path: Assets/Scenes/Spencer Price/Spencer_02.unity
+    guid: ac977d2e578454342b656e190feca36b
+  - enabled: 1
+    path: Assets/Scenes/Spencer Price/Spencer_03.unity
+    guid: 50ec15842ac8e624382135726c96b09b
+  - enabled: 1
+    path: Assets/Scenes/Spencer Price/Spencer_04.unity
+    guid: 753ef869df340c94f87285c11230bb0a
+  - enabled: 1
+    path: Assets/Scenes/Spencer Price/Spencer_05.unity
+    guid: 755b1b22177848140a52ec254033ec3c
   m_configObjects: {}
