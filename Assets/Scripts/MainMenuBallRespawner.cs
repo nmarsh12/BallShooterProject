@@ -7,8 +7,16 @@ using UnityEngine;
 
 public class MainMenuBallRespawner : MonoBehaviour
 {
-    public GameObject ball;
-    public int StartingBalls = 40;
+    [SerializeField] private GameObject ball;
+    [SerializeField] private int StartingBalls = 120;
+
+    [SerializeField] private int SpawnXmin = -25;
+    [SerializeField] private int SpawnXmax = 25;
+    [SerializeField] private int SpawnYmin = 7;
+    [SerializeField] private int SpawnYmax = 10;
+    [SerializeField] private int SpawnZmin = -40;
+    [SerializeField] private int SpawnZmax = -45;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -16,8 +24,8 @@ public class MainMenuBallRespawner : MonoBehaviour
         for (int i = 0; i < StartingBalls; i++)
         {
             int RandomX = Random.Range(-25, 25);
-            int RandomY = Random.Range(0, 150);
-            int RandomZ = Random.Range(-22, -30);
+            int RandomY = Random.Range(4, 125);
+            int RandomZ = Random.Range(-30, 10);
 
             GameObject go = Instantiate(ball, new Vector3(RandomX, RandomY, RandomZ), transform.rotation);
             
@@ -35,9 +43,9 @@ public class MainMenuBallRespawner : MonoBehaviour
     {        
         Destroy(other.gameObject);
 
-        int RandomX = Random.Range(-25, 25);
-        int RandomY = Random.Range(0, 25);
-        int RandomZ = Random.Range(-27, -30);
+        int RandomX = Random.Range(SpawnXmin, SpawnXmax);
+        int RandomY = Random.Range(SpawnYmin, SpawnYmax);
+        int RandomZ = Random.Range(SpawnZmin, SpawnZmax);
                 
 
         GameObject go = Instantiate(ball, new Vector3(RandomX, RandomY, RandomZ), transform.rotation);
