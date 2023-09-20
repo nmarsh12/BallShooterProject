@@ -18,8 +18,8 @@ public class LevelManager : MonoBehaviour
         nextScene = SceneManager.GetActiveScene().buildIndex + 1;
         
         if (nextScene <= 5)
-        {
-            SceneManager.LoadScene(nextScene);                       
+        {     
+            SceneManager.LoadScene(nextScene);            
         }
 
         else if (nextScene >= 6)

@@ -24,10 +24,7 @@ public class BallController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ballSpeed = rb_ball.angularVelocity.magnitude;
-        Debug.Log(ballSpeed);
-
-        
+        ballSpeed = rb_ball.angularVelocity.magnitude; 
 
         if (rb_ball.IsSleeping())  // The ball is set to sleep when the energy of the ball is less than the sleepThreshold found under Edit>ProjectSettings>Physics
         {
